@@ -12,6 +12,7 @@ let hideFeedbackForm = document.querySelector('.feedback-form__close-button');
 for (let i = 0; i < showFeedbackForm.length; i++) {
     let showFeedbackFormButton = showFeedbackForm[i];
     showFeedbackFormButton.onclick = () => {
+        mobileMenu.classList.remove('mobile-menu-wrapper--active');
         feedbackForm.classList.add('feedback-form--active');
         hideModalWindow.classList.add('modal-background--active');
         document.body.classList.add('lock');
@@ -31,13 +32,13 @@ let hideCallbackForm = document.querySelector('.callback-form__close-button');
 for (let i = 0; i < showCallbackForm.length; i++) {
     let showCallbackFormButton = showCallbackForm[i];
     showCallbackFormButton.onclick = () => {
+        mobileMenu.classList.remove('mobile-menu-wrapper--active');
         callbackForm.classList.add('callback-form--active');
         hideModalWindow.classList.add('modal-background--active');
         document.body.classList.add('lock');
     }
 
     hideCallbackForm.onclick = () => {
-        feedbackForm.classList.remove('feedback-form--active');
         callbackForm.classList.remove('callback-form--active');
         hideModalWindow.classList.remove('modal-background--active');
         document.body.classList.remove('lock');
