@@ -1,0 +1,24 @@
+.service-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+
+    &__item {
+        display: flex;
+        align-items: center;
+    }
+
+    &__label {
+        margin-right: 8px;
+        font-weight: bold;
+        display: none;
+
+        @media (min-width: $large_screen) {
+            display: block;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

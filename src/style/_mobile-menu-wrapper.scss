@@ -1,0 +1,18 @@
+.mobile-menu-wrapper {
+    display: none;
+    width: 320px;
+    height: 100vh;
+    overflow-x: hidden;
+    float: left;
+    position: fixed;
+
+    @media (min-width: $large_screen) {
+        display: block;
+    }
+
+    &--active {
+        display: block;
+        box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+        z-index: 10;
+    }
+}

@@ -1,0 +1,124 @@
+.page-main {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $large_screen) {
+        margin-left: 320px;
+    }
+
+    &__service-menu {
+        display: none;
+
+        @media (min-width: $large_screen) {
+            display: flex;
+        }
+    }
+
+    &__header {
+        display: flex;
+        padding: 24px 24px 24px 0;
+        justify-content: space-between;
+
+        &::before {
+            content: "";
+            display: flex;
+            align-self: center;
+            position: absolute;
+            width: 4px;
+            height: 32px;
+            background-color: $decor_color_blue;
+            border-radius: 0 10px 10px 0;
+        }
+    }
+
+    &__title {
+        font-size: 28px;
+        font-weight: 900;
+        line-height: 40px;
+        letter-spacing: -0.6px;
+        padding-left: 16px;
+        margin: 0;
+    }
+
+
+    &__nav {
+        overflow: hidden;
+    }
+
+    &__nav-list {
+        list-style: none;
+        display: flex;
+        padding-left: 16px;
+        overflow-x: scroll;
+        padding-bottom: 20px;
+        margin-bottom: -20px;
+
+        @media (min-width: $large_screen) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__nav-link {
+        display: flex;
+        padding: 6px 16px;
+        font-size: 16px;
+        line-height: 22px;
+        text-decoration: none;
+        letter-spacing: -0.2px;
+        color: $text_color_light;
+        white-space: nowrap;
+        border: 2px solid transparent;
+
+        &:hover {
+            background-color: white;
+            border: 2px solid $decor_color_blue;
+            border-radius: 6px;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 24px 0;
+        justify-content: space-between;
+    }
+
+    &__text {
+        height: 90px;
+        overflow: hidden;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0.2px;
+        margin: 0 16px 16px;
+
+        @media (min-width: $medium_screen) {
+            height: 160px;
+            width: 300px;
+        }
+
+
+        @media (min-width: $large_screen) {
+            width: 327px;
+        }
+
+        @media (min-width: $x-large_screen) {
+            width: 490px;
+        }
+
+    }
+
+    &__view-more-button {
+        margin: 0 0 16px 16px;
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+
+        @media (min-width: $medium_screen) {
+            border-radius: 6px;
+            width: 49%;
+            padding-right: 16px;
+        }
+    }
+}

@@ -1,0 +1,227 @@
+.prices-gallery {
+    background-color: $main_bg_color;
+    overflow-x: hidden;
+
+    @media (min-width: $medium_screen) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &::before,
+    &::after {
+        content: "";
+        display: block;
+        height: 1px;
+        background-color: $decor_color_blue;
+    }
+
+    &__table-header {
+        @media(max-width: $medium-screen) {
+            display: none;
+        }
+
+        display: flex;
+        padding: 16px 16px 0 32px;
+        color: $text_color_light;
+    }
+
+    &__table-header-item {
+
+        &:nth-child(1) {
+            flex: 1 0 49%;
+        }
+
+        &:nth-child(2) {
+            flex: 1 0 10%;
+        }
+
+        &:nth-child(3) {
+            flex: 1 0 27%;
+        }
+    }
+
+    &__item {
+
+        @media (min-width: $medium_screen) {
+            display: flex;
+            margin: 0;
+            justify-content: space-between;
+            min-height: 65px;
+            align-items: center;
+            border-bottom: 1px solid $decor_color_gray;
+        }
+
+        &:nth-child(5) {
+            border: none;
+        }
+    }
+
+    &__item-content {
+        display: flex;
+
+        @media (max-width: $medium-screen) {
+            display: block;
+        }
+
+        &:nth-child(1) {
+            @media(min-width: $medium_screen) {
+                flex: 1 0 50%;
+            }
+
+            &::before {
+                content: "Ремонтные услуги";
+                display: block;
+                color: $text_color_light;
+
+                @media (min-width: $medium_screen) {
+                    display: none;
+                }
+            }
+        }
+
+        &:nth-child(2) {
+            @media(min-width: $medium_screen) {
+                flex: 1 0 10%;
+            }
+
+            &::before {
+                content: "Цена";
+                display: block;
+                color: $text_color_light;
+
+                @media (min-width: $medium_screen) {
+                    display: none;
+                }
+            }
+        }
+
+        &:nth-child(3) {
+            @media(min-width: $medium_screen) {
+                flex: 1 0 10%;
+            }
+
+            &::before {
+                content: "Срок";
+                display: block;
+                color: $text_color_light;
+
+                @media (min-width: $medium_screen) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__button {
+        position: absolute;
+        bottom: 16px;
+        right: 16px;
+        width: 120px;
+        height: 30px;
+        border-radius: 16px;
+        padding-left: 12px;
+        text-align: left;
+        color: white;
+        font-family: $font-family;
+        font-size: 12px;
+        line-height: 24px;
+        letter-spacing: -0.15px;
+        text-transform: uppercase;
+        font-weight: 900;
+        border: 0;
+        background: url("img/white-arrow.svg") $nav_button_bg_color no-repeat 90% 50%;
+        background-size: 7px 9px;
+        transition: 0.3s ease-out;
+
+        @media (min-width: $medium_screen) {
+            position: static;
+            top: 0;
+            left: 0;
+            flex: 1 0 10%;
+        }
+
+        &:hover {
+            opacity: 0.5;
+            cursor: pointer;
+        }
+    }
+
+    &__swiper {
+        padding: 16px;
+
+        .swiper-wrapper {
+
+            @media (min-width: $medium_screen) {
+                display: block;
+                background-color: white;
+                padding: 16px;
+                border-radius: 6px;
+                width: auto;
+            }
+        }
+
+        .swiper-slide {
+            @media (max-width: $medium_screen) {
+                display: flex;
+                flex-direction: column;
+                width: 260px;
+                height: 200px;
+                padding: 16px;
+                border-radius: 6px;
+                background-color: white;
+                justify-content: space-between;
+                font-size: 14px;
+                font-weight: bold;
+                line-height: 18px;
+                letter-spacing: -0.2px;
+                color: $text_color_dark;
+            }
+        }
+
+        .swiper-pagination {
+            display: none;
+
+            @media (max-width: $medium_screen) {
+                display: block;
+                position: relative;
+                top: 5px;
+                margin-bottom: 10px;
+            }
+        }
+
+        .swiper-pagination-bullet-active {
+            color: white;
+            background-color: #B5B6BC;
+        }
+
+        .swiper-pagination-bullet {
+            background-color: #DDDDDD;
+        }
+    }
+
+    &__text {
+        padding: 16px;
+
+        @media(min-width: $medium-screen) {
+            width: 60%;
+        }
+    }
+
+    &__text-link {
+        display: block;
+        text-decoration: none;
+        color: $text_color_dark;
+        font-size: 16px;
+        font-weight: 700;
+        margin: 16px 0 32px 0;
+
+        &::after {
+            content: "";
+            display: inline-block;
+            width: 7px;
+            height: 12px;
+            margin-left: 10px;
+            background: url("img/pink-arrow.svg") no-repeat;
+        }
+    }
+}

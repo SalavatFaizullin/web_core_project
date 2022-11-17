@@ -1,0 +1,123 @@
+.types-gallery {
+    background-color: $main_bg_color;
+    overflow-x: hidden;
+
+    &::before {
+        content: "";
+        display: block;
+        height: 1px;
+        background-color: $decor_color_blue;
+    }
+
+    &__content {
+        @media (min-width: $medium_screen) {
+            padding-top: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            overflow-y: hidden;
+            justify-content: space-between;
+        }
+    }
+
+    &__item-title {
+        display: flex;
+        margin: 16px 0 0 16px;
+        margin-right: auto;
+        align-self: flex-start;
+    }
+
+    &__view-more-button {
+        display: none;
+
+        @media (min-width: $medium_screen) {
+            display: flex;
+            margin: 15px 0 24px 16px;
+        }
+    }
+
+    &__swiper {
+        padding: 12px 0 0 12px;
+
+        .swiper-wrapper {
+            display: flex;
+
+            @media(min-width: $medium-screen) {
+                flex-wrap: wrap;
+                height: 165px;
+            }
+        }
+
+        .swiper-slide {
+            display: flex;
+            width: 240px;
+            height: 160px;
+            border: 1px solid $decor_color_gray;
+            border-radius: 6px;
+            background-color: white;
+            justify-content: space-between;
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 24px;
+            letter-spacing: -0.2px;
+            color: $text_color_dark;
+            text-decoration: none;
+
+            &::after {
+                content: "";
+                display: flex;
+                width: 40px;
+                height: 40px;
+                border: 2px solid $nav_button_bg_color;
+                border-radius: 50%;
+                margin: 0 16px 16px 0;
+                background: url("img/pink-arrow.svg") no-repeat 55% 50%;
+                transition: 0.3s ease-out;
+                align-self: flex-end;
+            }
+
+            &:hover {
+                &::after {
+                    background: url("img/white-arrow.svg") $nav_button_bg_color no-repeat 55% 50%;
+                }
+            }
+
+            @media(min-width: $medium-screen) {
+                display: flex;
+                width: 230px;
+                height: 160px;
+                border: 1px solid $decor_color_gray;
+                border-radius: 6px;
+                background-color: white;
+                justify-content: space-between;
+                margin-right: 20px;
+                margin-bottom: 20px;
+                font-size: 16px;
+                font-weight: bold;
+                line-height: 24px;
+                letter-spacing: -0.2px;
+                color: $text_color_dark;
+                text-decoration: none;
+            }
+        }
+
+        .swiper-pagination {
+            display: none;
+
+            @media (max-width: $medium-screen) {
+                display: block;
+                position: relative;
+                top: 5px;
+                margin-bottom: 20px;
+            }
+        }
+
+        .swiper-pagination-bullet-active {
+            color: white;
+            background-color: #B5B6BC;
+        }
+
+        .swiper-pagination-bullet {
+            background-color: #DDDDDD;
+        }
+    }
+}

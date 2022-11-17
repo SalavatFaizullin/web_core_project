@@ -1,0 +1,56 @@
+.nav-button {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    text-decoration: none;
+    transition: 0.3s ease-out;
+    background: $nav_button_bg_color no-repeat 50% 50%;
+    ;
+
+
+    &:hover {
+        opacity: 0.5;
+        cursor: pointer;
+    }
+
+    &--burger {
+        background-image: url("img/burger-icon.svg");
+        margin-right: 16px;
+    }
+
+    &--phone {
+        background-image: url("img/phone-icon.svg");
+        margin-right: 16px;
+    }
+
+    &--chat {
+        background-image: url("img/chat-icon.svg");
+        margin-right: 16px;
+    }
+
+    &--profile {
+        background-image: url("img/profile-icon.svg");
+        margin-right: 16px;
+    }
+
+    &--repair {
+        background-image: url("img/repair-icon.svg");
+        margin-right: 16px;
+    }
+
+    &--check {
+        background-image: url("img/check-icon.svg");
+    }
+
+    &--close {
+        background-image: url("img/close-icon.svg");
+        margin-right: 16px;
+    }
+
+    &--search {
+        background-image: url("img/search-icon.svg");
+        margin-right: 5px;
+    }
+}

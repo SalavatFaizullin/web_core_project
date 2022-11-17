@@ -1,0 +1,34 @@
+.page-footer {
+    display: flex;
+    flex-direction: column;
+    color: $text_color_light;
+    padding: 16px;
+    text-align: center;
+
+    @media(min-width: $medium-screen) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__copyright {
+        flex: 1 0 30%;
+        margin-bottom: 16px;
+
+        @media(min-width: $medium-screen) {
+            text-align: left;
+        }
+    }
+
+    &__privacy-policy {
+        flex: 1 0 30%;
+        margin-bottom: 16px;
+    }
+
+    &__disclaimer {
+        flex: 1 0 30%;
+
+        @media(min-width: $medium-screen) {
+            text-align: right;
+        }
+    }
+}

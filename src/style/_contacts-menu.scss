@@ -1,0 +1,9 @@
+.contacts-menu {
+    display: none;
+    align-items: center;
+    list-style: none;
+
+    @media (min-width: $medium_screen) {
+        display: flex;
+    }
+}

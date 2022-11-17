@@ -1,0 +1,37 @@
+.view-more-button {
+    display: flex;
+    font-size: 16px;
+    font-family: $font-family;
+    font-weight: bold;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-decoration: none;
+    border: none;
+    background-color: $main_bg_color;
+    color: $text_color_dark;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &::before {
+        content: '';
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin-right: 8px;
+        background-image: url(img/arrow.png);
+    }
+
+    &--active {
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+            background-image: url(img/arrow.png);
+            transform: rotate(180deg);
+        }
+    }
+}

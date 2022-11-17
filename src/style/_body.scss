@@ -1,0 +1,20 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: $font-family;
+    color: $text_color_dark;
+    min-width: $small_screen;
+    max-width: $x-large-screen;
+    margin: 0 auto !important;
+    background-color: $main_bg_color;
+}

@@ -1,0 +1,52 @@
+.page-header {
+    background-color: white;
+
+    @media (min-width: $large_screen) {
+        display: none;
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        height: 1px;
+        background-color: $decor_color_blue;
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        padding: 18px 16px;
+    }
+
+    &__logo {
+        display: flex;
+        margin-right: auto;
+
+        &::before {
+            content: "";
+            display: none;
+            width: 2px;
+            height: 32px;
+            background-color: $decor_color_gray;
+            margin-right: 20px;
+            align-self: center;
+
+            @media (min-width: $medium_screen) {
+                display: flex;
+            }
+        }
+    }
+
+    &__service-menu {
+        &::before {
+            content: "";
+            display: flex;
+            width: 2px;
+            height: 32px;
+            background-color: $decor_color_gray;
+            margin-right: 20px;
+            margin-left: auto;
+            align-self: center;
+        }
+    }
+}
