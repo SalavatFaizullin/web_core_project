@@ -6,4 +6,8 @@
     @media (min-width: $medium_screen) {
         display: flex;
     }
+
+    &--mobile-menu {
+        display: flex;
+    }
 }
