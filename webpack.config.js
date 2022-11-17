@@ -5,6 +5,15 @@ const target = devMode ? 'web' : 'browserslist';
 const devtool = devMode ? 'source-map' : undefined;
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const productionConfig = merge([
+    {
+      output: {
+  
+        publicPath: "/web_core_project/",
+  
+      },
+    },
+  ]);
 
 module.exports = {
     mode,
